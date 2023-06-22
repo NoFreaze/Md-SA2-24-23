@@ -5,3 +5,5 @@
 Пример:
 
 #dos2unix example.sh
+
+Для работы скрипта на Python3 необходим модуль GitPython
