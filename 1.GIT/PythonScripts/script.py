@@ -7,7 +7,6 @@ import git
 local_repo_directory = os.getcwd()
 destination = "main"
 
-
 def clone_repo(ssh_string, folder):
     if folder != None:
         local_repo_directory = os.path.join(os.getcwd(), folder)
@@ -39,7 +38,6 @@ def create_branch(branch_name, folder):
     print("[*] Создана ветка " + branch_name + ".")
     print("[*] Осуществлен переход на новую ветку.")
 
-
 def add_and_commit_canges(message, folder):
     if folder != None:
         local_repo_directory = os.path.join(os.getcwd(), folder)
@@ -60,9 +58,6 @@ def push_changes(branch_name, folder):
     repo.git.push("--set-upstream", 'origin', branch_name)
 
 def main():
-    
-
-
     parser = ArgumentParser(description="Выберите 1 из параметров (-u, -c, -a, -p) для взаимодействия с репозиторием.\r\n Параметры -O и -L являются опциональными и могут быть использованы одновременно.")
     parser.add_argument("-u", "--update", help="Загрузка/обновление репозитория", action="store_true")
     parser.add_argument("-c", "--create_branch", help="Создание ветки и переключение на неё", action="store_true")
