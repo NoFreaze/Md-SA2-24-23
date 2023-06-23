@@ -11,7 +11,7 @@ else
         echo "Изменений в репозитории не обнаружено"
     else
         echo "Репозиторий был изменён"
-       #mail -s "Обновление в репозитории" terintsov95@mail.ru
+        mail -s "Обновление в репозитории" terintsov95@mail.ru
     fi
 fi
 
