@@ -1,0 +1,10 @@
+---
+- name: Get service facts
+  ansible.builtin.service_facts:
+
+- name: Check status nginx
+  shell: systemctl restart nginx
+  when: ansible_facts.services["nginx.service"].state == "stopped"
+
+- name: Reload nginx config
+  shell: nginx -s reload

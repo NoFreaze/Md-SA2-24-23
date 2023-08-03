@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - web_servers
+  handlers:
+    - import_tasks: roles/web_servers/handlers/main.yml
