@@ -1,4 +1,4 @@
-name: Run commands on different operating systems
+name: Run ansible playbook
 on:
   push:
     branches: [ main ]
@@ -6,27 +6,18 @@ on:
     branches: [ main ]
 
 jobs:
-  Run-npm-on-Ubuntu:
-    name: Run npm on Ubuntu
-    runs-on: ubuntu-latest
+  Run-ansible-playbook-on-debian:
+    name: Run ansible playbook on debian
+    runs-on: debian-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: dawidd6/action-ansible-playbook@v2
         with:
-          node-version: '14'
+          playbook: site.yml
+          directory: 2.Ansible/
+          key: ${{secrets.KART_SSH_PRIV_KEY}}
+          inventory: |
+            [all]
+            kartservices.com ansible_ssh_port=${{secrets.KART_SSH_PORT}} ansible_ssh_user=${{secrets.KART_SSH_USER}} ansible_become_user=${{secrets.KART_ANSIBLE_BECOME_USER}} ansible_become_password=${{secrets.KART_ANSIBLE_BECOME_PASSWORD}}
+          options: |
+            --verbose
       - run: npm help
-
-  Run-PSScriptAnalyzer-on-Windows:
-    name: Run PSScriptAnalyzer on Windows
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install PSScriptAnalyzer module
-        shell: pwsh
-        run: |
-          Set-PSRepository PSGallery -InstallationPolicy Trusted
-          Install-Module PSScriptAnalyzer -ErrorAction Stop
-      - name: Get list of rules
-        shell: pwsh
-        run: |
-          Get-ScriptAnalyzerRule
