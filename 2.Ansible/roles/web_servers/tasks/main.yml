@@ -1,8 +1,15 @@
 ---
 - name: Update apt
   apt: update_cache=yes
+- name: Install packages
+  apt: name={{ item }} state=latest
+  with_items:
+  - net-tools
+  - nano
+  - wget
+  - curl
 
-- name: install nginx
+- name: Install nginx
   apt: name=nginx state=latest
   notify: Start nginx
 
