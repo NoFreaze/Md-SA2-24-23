@@ -6,5 +6,9 @@
   shell: systemctl restart nginx
   when: ansible_facts.services["nginx.service"].state == "stopped"
 
-- name: Reload nginx config
+- name: Reload nginx
   shell: nginx -s reload
+  when: ansible_facts.services["nginx.service"].state == "running"
+
+- name: Start nginx
+  shell: systemctl enable nginx && systemctl start nginx
