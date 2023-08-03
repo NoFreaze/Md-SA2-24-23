@@ -1,0 +1,20 @@
+---
+- name: Update apt
+  apt: update_cache=yes
+
+- name: install nginx
+  apt: name=nginx state=latest
+
+- name: Create custom document root
+  file: path={{ document_root }} state=directory owner=www-data group=www-data
+
+- name: Copy nginx.conf
+  template: src=templates/nginx.conf dest=/etc/nginx/nginx.conf owner=www-data group=www-data
+  notify: Reload config nginx
+
+- name: Set up HTML file
+  copy: src=index.html dest={{ document_root }}/index.html owner=www-data group=www-data
+  notify: Check status nginx
+
+- include: handlers/main.yml
+
