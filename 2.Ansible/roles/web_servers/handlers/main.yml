@@ -7,7 +7,7 @@
   when: ansible_facts.services["nginx.service"].state == "stopped"
 
 - name: Reload nginx
-  shell: nginx -s reload
+  shell: nginx reload
   when: ansible_facts.services["nginx.service"].state == "running"
 
 - name: Start nginx
