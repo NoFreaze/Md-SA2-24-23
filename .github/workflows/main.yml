@@ -24,4 +24,5 @@ jobs:
             ${{secrets.REMOTE_HOST_IP}} ansible_ssh_port=${{secrets.SSH_PORT}} ansible_ssh_user=${{secrets.SSH_USER}} ansible_ssh_password=${{secrets.SSH_USER_PASSWORD}} username=root
           options: |
             --verbose
-      - run: systemctl status nginx
+      - run: curl secrets.REMOTE_HOST_IP:9999
+#Порт 9999 прописан в переменной 2.Ansible/roles/web_servers/defaults/main.yml
