@@ -18,7 +18,7 @@
 
 - name: Copy nginx.conf
   template: src=templates/nginx.conf dest=/etc/nginx/nginx.conf owner=www-data group=www-data
-  notify: Reload nginx
+  #notify: Reload nginx
 
 - name: Set up HTML file
   copy: src=index.html dest={{ document_root }}/index.html owner=www-data group=www-data
