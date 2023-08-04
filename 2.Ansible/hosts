@@ -1,4 +1,4 @@
 [webservers]
-debian12_2 ansible_host=192.168.1.101 hostname=local_webserver2.ru 
-debian12_3 ansible_host=192.168.1.102 hostname=local_webserver3.ru
-debian12_4 ansible_host=192.168.1.103 hostname=local_webserver4.ru
+debian12_2 ansible_host=192.168.1.101 hostname=local_webserver2.ru username=debian
+debian12_3 ansible_host=192.168.1.102 hostname=local_webserver3.ru username=debian
+debian12_4 ansible_host=192.168.1.103 hostname=local_webserver4.ru username=debian
