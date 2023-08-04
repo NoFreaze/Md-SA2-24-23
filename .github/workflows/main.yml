@@ -8,7 +8,7 @@ on:
 jobs:
   Run-ansible-playbook-on-debian:
     name: Run ansible playbook on debian
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: dawidd6/action-ansible-playbook@v2
         with:
