@@ -1,0 +1,97 @@
+{
+  "datasource": {
+    "type": "influxdb",
+    "uid": "a3db9062-6362-4c5c-87ea-a2561d78e86e"
+  },
+  "fieldConfig": {
+    "defaults": {
+      "mappings": [],
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "color": "green",
+            "value": null
+          },
+          {
+            "color": "red",
+            "value": 80
+          }
+        ]
+      },
+      "color": {
+        "mode": "thresholds"
+      },
+      "unit": "dthms"
+    },
+    "overrides": []
+  },
+  "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 0,
+    "y": 8
+  },
+  "id": 2,
+  "options": {
+    "reduceOptions": {
+      "values": false,
+      "calcs": [
+        "lastNotNull"
+      ],
+      "fields": ""
+    },
+    "orientation": "auto",
+    "textMode": "auto",
+    "colorMode": "value",
+    "graphMode": "area",
+    "justifyMode": "auto"
+  },
+  "pluginVersion": "10.1.0",
+  "targets": [
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "a3db9062-6362-4c5c-87ea-a2561d78e86e"
+      },
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "system",
+      "orderByTime": "ASC",
+      "policy": "autogen",
+      "query": "SELECT mean(\"uptime\") FROM \"autogen\".\"system\" WHERE $timeFilter GROUP BY time($__interval) fill(null)",
+      "rawQuery": true,
+      "refId": "A",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "uptime"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": []
+    }
+  ],
+  "title": "Panel Title",
+  "type": "stat"
+}

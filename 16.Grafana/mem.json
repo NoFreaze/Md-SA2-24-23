@@ -1,0 +1,104 @@
+{
+  "datasource": {
+    "type": "influxdb",
+    "uid": "a3db9062-6362-4c5c-87ea-a2561d78e86e"
+  },
+  "description": "",
+  "fieldConfig": {
+    "defaults": {
+      "mappings": [],
+      "thresholds": {
+        "mode": "percentage",
+        "steps": [
+          {
+            "color": "green",
+            "value": null
+          },
+          {
+            "color": "red",
+            "value": 80
+          }
+        ]
+      },
+      "color": {
+        "mode": "thresholds"
+      },
+      "unit": "bytes"
+    },
+    "overrides": []
+  },
+  "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 0,
+    "y": 16
+  },
+  "id": 1,
+  "options": {
+    "reduceOptions": {
+      "values": false,
+      "calcs": [
+        "lastNotNull"
+      ],
+      "fields": ""
+    },
+    "orientation": "auto",
+    "showThresholdLabels": false,
+    "showThresholdMarkers": true
+  },
+  "pluginVersion": "10.1.0",
+  "targets": [
+    {
+      "alias": "",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "a3db9062-6362-4c5c-87ea-a2561d78e86e"
+      },
+      "groupBy": [
+        {
+          "params": [
+            "host::tag"
+          ],
+          "type": "tag"
+        }
+      ],
+      "hide": false,
+      "measurement": "mem",
+      "orderByTime": "ASC",
+      "policy": "autogen",
+      "query": "SELECT \"active\", \"total\", \"used\" FROM \"autogen\".\"mem\" WHERE $timeFilter GROUP BY \"host\"::tag",
+      "rawQuery": true,
+      "refId": "A",
+      "resultFormat": "table",
+      "select": [
+        [
+          {
+            "params": [
+              "active"
+            ],
+            "type": "field"
+          }
+        ],
+        [
+          {
+            "params": [
+              "total"
+            ],
+            "type": "field"
+          }
+        ],
+        [
+          {
+            "params": [
+              "used"
+            ],
+            "type": "field"
+          }
+        ]
+      ],
+      "tags": []
+    }
+  ],
+  "title": "Panel Title",
+  "type": "gauge"
+}

@@ -1,0 +1,108 @@
+{
+  "type": "piechart",
+  "title": "Panel Title",
+  "gridPos": {
+    "x": 0,
+    "y": 0,
+    "w": 12,
+    "h": 8
+  },
+  "datasource": {
+    "uid": "a3db9062-6362-4c5c-87ea-a2561d78e86e",
+    "type": "influxdb"
+  },
+  "id": 4,
+  "targets": [
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "a3db9062-6362-4c5c-87ea-a2561d78e86e"
+      },
+      "refId": "A",
+      "resultFormat": "time_series",
+      "orderByTime": "ASC",
+      "tags": [],
+      "groupBy": [
+        {
+          "type": "time",
+          "params": [
+            "$__interval"
+          ]
+        },
+        {
+          "type": "fill",
+          "params": [
+            "null"
+          ]
+        }
+      ],
+      "select": [
+        [
+          {
+            "type": "field",
+            "params": [
+              "used"
+            ]
+          },
+          {
+            "type": "mean",
+            "params": []
+          }
+        ],
+        [
+          {
+            "type": "field",
+            "params": [
+              "total"
+            ]
+          },
+          {
+            "type": "mean",
+            "params": []
+          }
+        ]
+      ],
+      "policy": "autogen",
+      "measurement": "swap",
+      "query": "SELECT mean(\"used\"), mean(\"total\") FROM \"swap\" WHERE $timeFilter GROUP BY time($__interval) fill(null)",
+      "rawQuery": true
+    }
+  ],
+  "fieldConfig": {
+    "defaults": {
+      "custom": {
+        "hideFrom": {
+          "tooltip": false,
+          "viz": false,
+          "legend": false
+        }
+      },
+      "color": {
+        "mode": "palette-classic"
+      },
+      "mappings": [],
+      "unit": "bytes"
+    },
+    "overrides": []
+  },
+  "pluginVersion": "10.1.0",
+  "options": {
+    "reduceOptions": {
+      "values": false,
+      "calcs": [
+        "lastNotNull"
+      ],
+      "fields": ""
+    },
+    "pieType": "pie",
+    "tooltip": {
+      "mode": "single",
+      "sort": "none"
+    },
+    "legend": {
+      "showLegend": true,
+      "displayMode": "list",
+      "placement": "bottom"
+    }
+  }
+}
