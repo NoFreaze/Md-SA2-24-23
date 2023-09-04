@@ -1,0 +1,327 @@
+{
+  "_index": "filebeat-2023.09.04",
+  "_type": "_doc",
+  "_id": "gb5PYIoB2LMjK17jrEAL",
+  "_version": 1,
+  "_score": 1,
+  "_ignored": [
+    "cloud.instance.id.keyword",
+    "cloud.instance.name.keyword",
+    "cloud.machine.type.keyword",
+    "cloud.availability_zone.keyword"
+  ],
+  "_source": {
+    "agent": {
+      "ephemeral_id": "88b92215-60a0-4680-973f-d55e039d0c05",
+      "id": "899757f6-85d9-4c65-a5d8-f07eeb6ea7af",
+      "type": "filebeat",
+      "version": "7.17.0",
+      "name": "debian",
+      "hostname": "debian"
+    },
+    "input": {
+      "type": "log"
+    },
+    "message": "2023/09/04 16:08:55 [alert] 805#805: aborting",
+    "service": {
+      "type": "nginx"
+    },
+    "fileset": {
+      "name": "error"
+    },
+    "@version": "1",
+    "tags": [
+      "beats_input_codec_plain_applied"
+    ],
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "log": {
+      "file": {
+        "path": "/var/log/nginx/error.log"
+      },
+      "offset": 153
+    },
+    "cloud": {
+      "service": {
+        "name": "Nova"
+      },
+      "availability_zone": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n",
+      "instance": {
+        "name": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n",
+        "id": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+      },
+      "machine": {
+        "type": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+      },
+      "provider": "openstack"
+    },
+    "event": {
+      "timezone": "+03:00",
+      "module": "nginx",
+      "dataset": "nginx.error"
+    },
+    "host": {
+      "architecture": "x86_64",
+      "mac": [
+        "00:0c:29:75:d3:99"
+      ],
+      "os": {
+        "kernel": "5.10.0-25-amd64",
+        "platform": "debian",
+        "family": "debian",
+        "type": "linux",
+        "codename": "bullseye",
+        "version": "11 (bullseye)",
+        "name": "Debian GNU/Linux"
+      },
+      "id": "fa6c61ebc0d845bea9a138b3cdf484a1",
+      "ip": [
+        "192.168.1.135",
+        "fe80::20c:29ff:fe75:d399"
+      ],
+      "containerized": false,
+      "name": "debian",
+      "hostname": "debian"
+    },
+    "type": "syslog",
+    "@timestamp": "2023-09-04T13:09:02.628Z"
+  },
+  "fields": {
+    "agent.version.keyword": [
+      "7.17.0"
+    ],
+    "host.architecture.keyword": [
+      "x86_64"
+    ],
+    "host.name.keyword": [
+      "debian"
+    ],
+    "event.dataset.keyword": [
+      "nginx.error"
+    ],
+    "host.hostname": [
+      "debian"
+    ],
+    "type": [
+      "syslog"
+    ],
+    "host.mac": [
+      "00:0c:29:75:d3:99"
+    ],
+    "agent.hostname.keyword": [
+      "debian"
+    ],
+    "cloud.availability_zone": [
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+    ],
+    "service.type": [
+      "nginx"
+    ],
+    "ecs.version.keyword": [
+      "1.12.0"
+    ],
+    "host.ip.keyword": [
+      "192.168.1.135",
+      "fe80::20c:29ff:fe75:d399"
+    ],
+    "host.os.version": [
+      "11 (bullseye)"
+    ],
+    "type.keyword": [
+      "syslog"
+    ],
+    "host.os.name": [
+      "Debian GNU/Linux"
+    ],
+    "agent.name": [
+      "debian"
+    ],
+    "host.id.keyword": [
+      "fa6c61ebc0d845bea9a138b3cdf484a1"
+    ],
+    "host.name": [
+      "debian"
+    ],
+    "host.os.version.keyword": [
+      "11 (bullseye)"
+    ],
+    "host.os.type": [
+      "linux"
+    ],
+    "agent.id.keyword": [
+      "899757f6-85d9-4c65-a5d8-f07eeb6ea7af"
+    ],
+    "fileset.name": [
+      "error"
+    ],
+    "input.type": [
+      "log"
+    ],
+    "@version.keyword": [
+      "1"
+    ],
+    "cloud.service.name.keyword": [
+      "Nova"
+    ],
+    "log.offset": [
+      153
+    ],
+    "agent.hostname": [
+      "debian"
+    ],
+    "tags": [
+      "beats_input_codec_plain_applied"
+    ],
+    "host.architecture": [
+      "x86_64"
+    ],
+    "fileset.name.keyword": [
+      "error"
+    ],
+    "cloud.machine.type": [
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+    ],
+    "cloud.provider": [
+      "openstack"
+    ],
+    "agent.id": [
+      "899757f6-85d9-4c65-a5d8-f07eeb6ea7af"
+    ],
+    "cloud.service.name": [
+      "Nova"
+    ],
+    "ecs.version": [
+      "1.12.0"
+    ],
+    "host.containerized": [
+      false
+    ],
+    "message.keyword": [
+      "2023/09/04 16:08:55 [alert] 805#805: aborting"
+    ],
+    "event.module.keyword": [
+      "nginx"
+    ],
+    "host.hostname.keyword": [
+      "debian"
+    ],
+    "agent.version": [
+      "7.17.0"
+    ],
+    "host.os.family": [
+      "debian"
+    ],
+    "event.timezone.keyword": [
+      "+03:00"
+    ],
+    "service.type.keyword": [
+      "nginx"
+    ],
+    "input.type.keyword": [
+      "log"
+    ],
+    "tags.keyword": [
+      "beats_input_codec_plain_applied"
+    ],
+    "host.ip": [
+      "192.168.1.135",
+      "fe80::20c:29ff:fe75:d399"
+    ],
+    "cloud.instance.id": [
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+    ],
+    "agent.type": [
+      "filebeat"
+    ],
+    "event.module": [
+      "nginx"
+    ],
+    "host.os.kernel.keyword": [
+      "5.10.0-25-amd64"
+    ],
+    "host.os.kernel": [
+      "5.10.0-25-amd64"
+    ],
+    "@version": [
+      "1"
+    ],
+    "host.os.name.keyword": [
+      "Debian GNU/Linux"
+    ],
+    "host.id": [
+      "fa6c61ebc0d845bea9a138b3cdf484a1"
+    ],
+    "log.file.path.keyword": [
+      "/var/log/nginx/error.log"
+    ],
+    "event.timezone": [
+      "+03:00"
+    ],
+    "agent.type.keyword": [
+      "filebeat"
+    ],
+    "agent.ephemeral_id.keyword": [
+      "88b92215-60a0-4680-973f-d55e039d0c05"
+    ],
+    "host.os.codename.keyword": [
+      "bullseye"
+    ],
+    "host.mac.keyword": [
+      "00:0c:29:75:d3:99"
+    ],
+    "agent.name.keyword": [
+      "debian"
+    ],
+    "host.os.codename": [
+      "bullseye"
+    ],
+    "message": [
+      "2023/09/04 16:08:55 [alert] 805#805: aborting"
+    ],
+    "host.os.family.keyword": [
+      "debian"
+    ],
+    "@timestamp": [
+      "2023-09-04T13:09:02.628Z"
+    ],
+    "host.os.type.keyword": [
+      "linux"
+    ],
+    "host.os.platform": [
+      "debian"
+    ],
+    "host.os.platform.keyword": [
+      "debian"
+    ],
+    "log.file.path": [
+      "/var/log/nginx/error.log"
+    ],
+    "cloud.provider.keyword": [
+      "openstack"
+    ],
+    "agent.ephemeral_id": [
+      "88b92215-60a0-4680-973f-d55e039d0c05"
+    ],
+    "event.dataset": [
+      "nginx.error"
+    ],
+    "cloud.instance.name": [
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+    ]
+  },
+  "ignored_field_values": {
+    "cloud.instance.id.keyword": [
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+    ],
+    "cloud.machine.type.keyword": [
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+    ],
+    "cloud.instance.name.keyword": [
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+    ],
+    "cloud.availability_zone.keyword": [
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<meta content=\"no-cache\" http-equiv=\"Pragma\" />\r\n<title>Waiting...</title>\r\n<script type=\"text/javascript\">\r\nvar pageName = '/';\r\ntop.location.replace(pageName);\r\n</script>\r\n</head>\r\n<body> </body>\r\n</html>\r\n"
+    ]
+  }
+}
