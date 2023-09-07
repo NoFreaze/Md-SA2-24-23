@@ -1,0 +1,14 @@
+name: Run ansible playbook
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Run-docker-on-host:
+    name: Run docker on host
+    runs-on: [self-hosted]
+    steps:
+      - name: List current folder
+      - run: ls ~/docker
