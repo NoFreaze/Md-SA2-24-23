@@ -19,6 +19,8 @@ echo $result
 if [ $result -eq 0 ]; then
    kubectl apply -f ingress_rule.yml
    echo "No errors found, creating service"
+   exit 0
 else
    echo "The file failed verification!" 
+   exit 1
 fi
