@@ -1,8 +1,6 @@
-name: Run ansible playbook
+name: Run docker
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 jobs:
