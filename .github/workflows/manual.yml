@@ -9,4 +9,4 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - name: docker check
-        run: sudo -u root docker run -u 0 -d -p 8080:8080 -p 50000:50000 -v /data/jenkins:/var/jenkins_home jenkins/jenkins:lts
+        run: su root && docker run -d -p 8080:8080 -p 50000:50000 -v /data/jenkins:/var/jenkins_home jenkins/jenkins:lts
