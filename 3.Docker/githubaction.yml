@@ -1,0 +1,12 @@
+name: Run docker
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  Run-docker-on-host:
+    name: Run docker on host
+    runs-on: [self-hosted]
+    steps:
+      - name: docker compose up
+        run: sudo docker-compose up -d
