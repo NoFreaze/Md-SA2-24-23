@@ -8,5 +8,5 @@ jobs:
     name: Run docker on host
     runs-on: [self-hosted]
     steps:
-      - name: docker check
-        run: docker run -d -p 8080:8080 alpine
+      - name: docker compose up
+        run: docker-compose up
