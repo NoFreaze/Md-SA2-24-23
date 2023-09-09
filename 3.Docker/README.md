@@ -4,7 +4,7 @@
                                      --build-arg name=name
                                      --build-arg labels=label1,label2
                                      --build-arg dir=work-dir
-                                     --build-arg url=urk-repo
+                                     --build-arg url=url-repo
 
 
 Запуск образа.
