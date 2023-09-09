@@ -9,4 +9,4 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - name: docker compose up
-        run: sudo -u root docker-compose up
+        run: sudo docker-compose up
