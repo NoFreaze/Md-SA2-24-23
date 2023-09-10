@@ -1,7 +1,7 @@
 FROM debian:stretch-slim
 
 ARG RUNNER_VERSION="2.308.0"
-ARG token="AO5GQ76P57KE2N3325I32PLE7SKIM"
+ARG token="AO5GQ76BWFGDUGIW4MM4EDTE7SYEQ"
 ARG labels="Linux"
 ARG dir="_work"
 ARG name="Runner"

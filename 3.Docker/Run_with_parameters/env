@@ -1,0 +1,6 @@
+GITHUB_RUNNER_TOKEN=AO5GQ762FS2JTKYAK462OY3E7XCEQ 
+URL_REPO=https://github.com/NoFreaze/Md-SA2-24-23
+R_NAME=Runner4
+R_LABELS=self-hosted,Linux
+WORK_DIR=_work
+R_GROUP=Default
