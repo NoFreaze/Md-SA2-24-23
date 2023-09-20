@@ -1,0 +1,17 @@
+container:
+  image:  nofreaze/crudapp
+
+requests:
+  cpu: 50m
+  memory: 250Mi
+
+limits:
+  cpu: 140m
+  memory: 500Gi
+
+ports:
+  containerPort: 80
+
+app: crudapp
+
+replicas: 1

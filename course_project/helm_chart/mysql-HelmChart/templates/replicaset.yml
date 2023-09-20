@@ -1,0 +1,44 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: {{ .Values.app }}
+  labels:
+    app: {{ .Values.app }}
+spec:
+  replicas: {{ .Values.replicaset.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}
+    spec:
+      containers:
+      - name: database
+        image: mysql
+        resources:
+          requests:
+            cpu: {{ .Values.requests.cpu }}
+            memory: {{.Values.requests.memory }}
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: {{ .Values.MYSQL_ROOT_PASSWORD }}
+        livenessProbe:
+          tcpSocket:
+            port: 3306
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+          - name: database-volume
+            mountPath: "/var/lib/mysql"
+          - name: database-config
+            mountPath: "/mnt"
+      volumes:
+      - name: database-volume
+        persistentVolumeClaim:
+          claimName: database-volume
+      - name: database-config
+        persistentVolumeClaim:
+          claimName: databaseconfig

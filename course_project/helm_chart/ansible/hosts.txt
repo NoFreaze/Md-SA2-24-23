@@ -1,0 +1,5 @@
+[kuber-slave]
+debian-host5 ansible_host=192.168.1.205 ansible_user=debian
+debian-host6 ansible_host=192.168.1.206 ansible_user=debian
+debian-host7 ansible_host=192.168.1.207 ansible_user=debian
+debian-host8 ansible_host=192.168.1.208 ansible_user=debian

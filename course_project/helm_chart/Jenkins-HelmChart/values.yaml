@@ -1,0 +1,14 @@
+resources:
+  requests:
+    cpu: 2
+    memory: 500Mi
+  limits:
+    cpu: 3
+    memory: 2Gi
+
+app: jenkins
+
+containers:
+  image: jenkins/jenkins
+
+namespace: jenkins

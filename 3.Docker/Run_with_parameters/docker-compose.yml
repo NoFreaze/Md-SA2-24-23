@@ -1,41 +1,21 @@
-version: '3.5'
+version: '1.24'
 
 services:
-  postgres:
-    container_name: postgres_container
-    image: postgres
+  github_action_runner:
+    container_name: github_runner
+    image: gitrunner
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      PGDATA: /data/postgres
-    volumes:
-      - postgres:/data/postgres
-    ports:
-      - "5555:5555"
+      GITHUB_RUNNER_TOKEN: AO5GQ75XVR4YNALXFLRF6MDE7XE7U
+      URL_REPO: https://github.com/NoFreaze/Md-SA2-24-23
+      R_NAME: Runner7
+      R_LABELS: self-hosted,Linux
+      WORK_DIR: _work
+      R_GROUP: Default
     networks:
-      - postgres
-    restart: unless-stopped
-  
-  pgadmin:
-    container_name: pgadmin_container
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@mymail.ru
-      PGADMIN_DEFAULT_PASSWORD: adminpassword
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    volumes:
-      - pgadmin:/var/lib/pgadmin
-
-    ports:
-      - 81:80
-    networks:
-      - postgres
-    restart: unless-stopped
+      - docker
+#    restart: unless-stopped
 
 networks:
-  postgres:
+  docker:
     driver: bridge
 
-volumes:
-    postgres:
-    pgadmin:

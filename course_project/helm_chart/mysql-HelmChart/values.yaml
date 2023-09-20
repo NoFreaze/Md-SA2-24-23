@@ -1,0 +1,22 @@
+spec1:
+  capacity:
+    storage: 5Gi
+  hostPath:
+    path: /home/debian/mysqldata
+
+spec2:
+  capacity:
+    storage: 100Mi
+  hostPath:
+    path: /home/debian/mysqlscript
+
+replicaset:
+  replicas: 1
+
+app: mysql
+
+requests:
+  cpu: 2
+  memory: 800Mi
+
+MYSQL_ROOT_PASSWORD: root

@@ -1,0 +1,38 @@
+---
+- name: example playbook
+  hosts: all
+  become: yes
+
+
+  vars:
+    variable: 124
+    msg:
+
+  tasks:
+    - name: Gather the package facts
+      package_facts:
+        manager: auto
+    - name: print os_fam
+      debug:
+        var: ansible_facts.packages
+    - name: variable
+      debug:
+        msg: "{{ variable }}"
+    - name: Get facts
+      ansible.builtin.service_facts:
+    - name: Stop service if Rinning one
+      shell: systemctl stop nginx
+      when: ansible_facts.services["nginx.service"] is defined and ansible_facts.services["nginx.service"].state == "running"
+    - name: Start service if Stopped
+      shell: systemctl start nginx
+      when: ansible_facts.services["nginx.service"] is defined and ansible_facts.services["nginx.service"].state == "stopped"
+    - name: Register File Stat
+      stat:
+        path: /etc/nginx/nginx.conf
+      register: stat_result
+    - name: cat file if exist
+      shell: cat /etc/nginx/nginx.conf
+      when: stat_result.stat.exists
+      register: script
+    - name: cat 
+      debug: msg={{script.stdout}}

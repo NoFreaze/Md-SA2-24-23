@@ -1,0 +1,2 @@
+HOSTNAME="mysql.default.svc.cluster.local."
+PORT=3306

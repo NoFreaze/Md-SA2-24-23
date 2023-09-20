@@ -1,0 +1,16 @@
+apiVersion: v2
+name       : crudapp-HelmChart
+description: My Helm chart for Kubernetes
+type       : application
+version    : 3.12.3   # This is the Helm Chart version
+appVersion : "1.0.0" # This is the version of the application being deployed
+
+keywords:
+  - crudapp
+  - Python
+  - Flask
+  - Flask_db
+
+maintainers:
+  - name : Terintsov Ilya
+    email: terintsov95@mail.ru

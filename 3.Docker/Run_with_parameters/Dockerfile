@@ -25,7 +25,7 @@ RUN set -e \
     && rm -rf /root/.cache \
     && rm -rf /action-runner/externals 
 
-COPY docker-compose.yml /docker-compose.yml
+COPY composefile/docker-compose.yml /docker-compose.yml
 
 ENTRYPOINT sudo -u runner /action-runner/config.sh \
     --url ${URL_REPO} --token ${GITHUB_RUNNER_TOKEN} \

@@ -1,0 +1,2 @@
+kubectl apply -f dashboard-account.yml
+kubectl -n kubernetes-dashboard create token admin-user

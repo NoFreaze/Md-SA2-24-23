@@ -1,0 +1,13 @@
+container:
+  image: adminer:latest
+
+requests:
+  cpu: 100m
+  memory: 500Mi
+
+limits:
+  cpu: 400m
+  memory: 700Gi
+
+ports:
+  containerPort: 8080
