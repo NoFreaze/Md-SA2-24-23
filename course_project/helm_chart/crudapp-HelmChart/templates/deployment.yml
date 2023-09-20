@@ -4,6 +4,12 @@ kind: Deployment
 metadata:
   name: {{ .Values.app }}
 spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+       maxSurge: 25%
+       maxUnavailable: 25%  
   replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
