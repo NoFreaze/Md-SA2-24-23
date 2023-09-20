@@ -37,3 +37,14 @@ spec:
                 name: adminer-service
                 port:
                   number: 8080
+    - host: kibana
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kibana-service
+                port:
+                  number: 5601
+
